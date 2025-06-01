@@ -12,7 +12,7 @@ function App(){
   const recipes = [
     {
       id: 1,
-      name: "Pasta al Pesto Genovese",
+      name: "Pasta al Pesto",
       description: "Un classico della cucina ligure, veloce e saporito.",
       imageUrl: "https://images.unsplash.com/photo-1621995818295-8e47458622c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzM4ODQxfDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=400"
     },
@@ -24,7 +24,7 @@ function App(){
     },
     {
       id: 3,
-      name: "Tiramisù Classico",
+      name: "Tiramisù",
       description: "Il dessert italiano più amato, strati di bontà.",
       imageUrl: "https://images.unsplash.com/photo-1621995818295-8e47458622c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzM4ODQxfDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=400"
     },
