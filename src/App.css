@@ -113,3 +113,28 @@
   justify-content: center; /* Centra le card orizzontalmente */
   padding: 20px;
 }
+
+
+/* Nuovi stili per SearchBar */
+.search-bar {
+  margin: 20px auto;
+  padding: 10px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.search-input {
+  width: 80%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 1.1em;
+  outline: none;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.search-input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
