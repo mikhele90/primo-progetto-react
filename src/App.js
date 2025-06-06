@@ -11,7 +11,6 @@ function App(){
   const appCompanyName = "Ricette Intelligenti SRL";
   const [searchTerm, setSearchTerm] = useState('');
 
-
   const recipes = [
     {
       id: 1,
@@ -47,14 +46,20 @@ function App(){
     }
   ];
 
+
   // Logica di filtro: crea un nuovo array di ricette filtrate
+
   const filteredRecipes = recipes.filter(recipe =>
+
     // Convertiamo tutto in minuscolo per una ricerca case-insensitive
+
     recipe.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     recipe.description.toLowerCase().includes(searchTerm.toLowerCase())
+
     // Puoi aggiungere anche altri campi da cercare, es. ingredienti:
     // || recipe.ingredients.some(ingredient => ingredient.toLowerCase().includes(searchTerm.toLowerCase()))
   );
+
 
   return (
     <div className="App">
@@ -64,18 +69,19 @@ function App(){
           searchTerm={searchTerm}
           onSearchChange={setSearchTerm}
         />
-
+         {/* Mostriamo un messaggio se non ci sono ricette filtrate */}
          {filteredRecipes.length === 0 && searchTerm !== '' ? (
           <p className="no-results">Nessuna ricetta trovata per "{searchTerm}".</p>
         ) : (
           <div className="recipe-list-container">
+
             {/* Ora mappiamo sull'array filtrato! */}
             {filteredRecipes.map(recipe => (
               <RecipeCard
                 key={recipe.id}
                 name={recipe.name}
                 description={recipe.description}
-                imageUrl={recipe.imageUrl} // Assicurati di usare imageUrl come nel tuo array recipes
+                imageUrl={recipe.imageUrl}
                 ingredients={recipe.ingredients}
                 instructions={recipe.instructions}
               />
