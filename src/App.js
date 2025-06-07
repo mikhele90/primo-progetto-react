@@ -1,4 +1,10 @@
 import React, { useState } from "react";
+import { BrowserRouter, Routes, Route, Link} from "react-router-dom";
+import NavBar from "./components/NavBar";
+import Home from "./pages/HomePage";
+import Prodotti from "./pages/ProdottiPage";
+import Contatti from "./pages/ContattiPage";
+
 import './App.css';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -62,9 +68,19 @@ function App(){
 
 
   return (
+    <BrowserRouter>
     <div className="App">
+      <NavBar />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/prodotti" element={<Prodotti />} />
+          <Route path="/contatti" element={<Contatti />} />
+        </Routes>
+
       <Header title={appMainTitle} tagLine={appTagLine} />
       <main>
+        
         <SearchBar
           searchTerm={searchTerm}
           onSearchChange={setSearchTerm}
@@ -92,6 +108,7 @@ function App(){
       
       <Footer companyName={appCompanyName} />
     </div>
+    </BrowserRouter>
   );
 }
 

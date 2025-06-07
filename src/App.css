@@ -1,5 +1,18 @@
 /* src/App.css */
 
+.navbar {
+    background-color: #333; /* Colore di sfondo scuro */
+    color: white; /* Colore del testo */
+    padding: 15px 20px; /* Spaziatura interna */
+    display: flex; /* Utilizza Flexbox per l'allineamento degli elementi */
+    justify-content: space-between; /* Sposta gli elementi alle estremità */
+    align-items: center; /* Centra verticalmente gli elementi */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombra leggera */
+    position: sticky; /* Rende la navbar "appiccicosa" in alto */
+    top: 0; /* Si attacca in alto */
+    z-index: 1000; /* Assicura che sia sopra gli altri elementi */
+}
+
 .app-header {
   background-color: #f0f0f0;
   padding: 20px;
