@@ -1,6 +1,6 @@
 function Contatti(){
     return (
-        <h2>Contatti</h2>
+        <h1>Contatti</h1>
     )
 };
 

@@ -1,17 +1,51 @@
 /* src/App.css */
-
+/* Stili per il contenitore principale della navbar */
 .navbar {
-    background-color: #333; /* Colore di sfondo scuro */
-    color: white; /* Colore del testo */
-    padding: 15px 20px; /* Spaziatura interna */
-    display: flex; /* Utilizza Flexbox per l'allineamento degli elementi */
-    justify-content: space-between; /* Sposta gli elementi alle estremità */
-    align-items: center; /* Centra verticalmente gli elementi */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombra leggera */
-    position: sticky; /* Rende la navbar "appiccicosa" in alto */
-    top: 0; /* Si attacca in alto */
-    z-index: 1000; /* Assicura che sia sopra gli altri elementi */
+  background-color: #333; /* Sfondo scuro per contrasto */
+  padding: 1rem 0; /* Spaziatura interna verticale */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Leggera ombra per profondità */
 }
+
+/* Stili per la lista non ordinata (<ul>) all'interno della navbar */
+.navbar ul {
+  list-style: none; /* Rimuove i pallini della lista */
+  margin: 0; /* Rimuove il margine predefinito */
+  padding: 0; /* Rimuove il padding predefinito */
+  display: flex; /* Rende gli elementi della lista affiancati */
+  justify-content: center; /* Centra orizzontalmente gli elementi */
+  gap: 20px; /* Spazio tra gli elementi della lista */
+}
+
+/* Stili per gli elementi della lista (<li>) */
+.navbar li {
+  margin: 0; /* Assicura nessun margine aggiuntivo */
+}
+
+/* Stili per i link (<a> o <Link>) all'interno della navbar */
+.navbar a {
+  color: white; /* Colore del testo bianco */
+  text-decoration: none; /* Rimuove la sottolineatura dei link */
+  font-size: 1.1rem; /* Dimensione del font */
+  font-weight: bold; /* Grassetto */
+  padding: 0.5rem 1rem; /* Spaziatura interna per rendere cliccabile l'area */
+  transition: background-color 0.3s ease; /* Transizione fluida per l'hover */
+  border-radius: 4px; /* Angoli leggermente arrotondati */
+}
+
+/* Stili per i link quando ci si passa sopra con il mouse (hover) */
+.navbar a:hover {
+  background-color: #555; /* Cambia lo sfondo al passaggio del mouse */
+}
+
+/* Stili per il link attivo (se React Router aggiunge una classe 'active' o simile) */
+/* Se usi NavLink di react-router-dom, puoi usare .navbar a.active */
+/* Se usi solo Link, potresti dover gestire la classe 'active' manualmente o con una libreria */
+.navbar a.active {
+  background-color: #007bff; /* Sfondo blu per il link attivo */
+  color: white;
+}
+
+
 
 .app-header {
   background-color: #f0f0f0;

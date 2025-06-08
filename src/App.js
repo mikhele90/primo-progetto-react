@@ -1,18 +1,14 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route, Link} from "react-router-dom";
+import './App.css';
 import NavBar from "./components/NavBar";
-import Home from "./pages/HomePage"; //
+import HomePage from "./pages/HomePage";
 import Prodotti from "./pages/ProdottiPage";
 import Contatti from "./pages/ContattiPage";
-
-import './App.css';
 import Footer from "./components/Footer"; 
-import HomePage from "./pages/HomePage";
 
 function App(){
   const appCompanyName = "Ricette Intelligenti SRL";
-
-
 
   return (
     <BrowserRouter>
@@ -21,7 +17,7 @@ function App(){
 
         <Routes>
           {/* Ora HomePage conterrà Header, SearchBar e le ricette */}
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/prodotti" element={<Prodotti />} />
           <Route path="/contatti" element={<Contatti />} />
         </Routes>
