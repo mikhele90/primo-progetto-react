@@ -30,9 +30,6 @@ function RecipeCard(props) {
     }, [showDetails, name]); // <--- Dipendenze: l'effetto si riesegue quando showDetails o name cambiano
 
 
-
-
-
     // COMPONENTE CARD
     return (
         <div className='recipe-card'>

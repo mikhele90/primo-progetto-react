@@ -14,6 +14,7 @@ function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  
   const recipes = [
     {
       id: 1,

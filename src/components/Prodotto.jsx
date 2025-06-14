@@ -9,11 +9,12 @@ function Prodotto({ title, description, isGood }){
             height: '300px',
             width: '300px',
             margin: '5px',
+            padding: '1px',
             display: 'flex',
             flexDirection: "column",
         }}>
             <h3>{title}</h3>
-            <p>{description}</p>
+            <p>{description}</p><br />
             {isGood ? <span>&#128527; Good</span> :
             <span>&#128533; Not Good</span>}
         </div>
