@@ -185,3 +185,24 @@
   border-color: #4CAF50;
   box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
 }
+
+.error-message, .loading-message, .no-results {
+  text-align: center;
+  font-size: 1.2em;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+.loading-message {
+  background-color: #e0f2f7; /* Blu chiaro */
+  color: #2196f3; /* Blu */
+  border: 1px solid #90caf9;
+}
+
+.error-message {
+  background-color: #ffe0e0; /* Rosso chiaro */
+  color: #d32f2f; /* Rosso scuro */
+  border: 1px solid #ef9a9a;
+}

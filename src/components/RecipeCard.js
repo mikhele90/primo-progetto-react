@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function RecipeCard(props) {
     const { name, description, imageUrl, ingredients, instructions } = props;
@@ -10,6 +10,28 @@ function RecipeCard(props) {
         setShowDetails(!showDetails);
     }
     const likesCounter = () => {setLikesCount(likesCount + 1)};
+
+
+
+    useEffect(() =>{
+        if (showDetails){
+            document.title = `${name}`;
+        }
+        else {
+            document.title = 'Ricettario';
+        }
+
+        // Funzione di cleanup
+        return () => {
+            // Quando showDetails cambia da true a false, o il componente viene smontato,
+            // ripristiniamo il titolo predefinito per evitare che rimanga il titolo della ricetta
+            document.title = 'Ricettario';
+        };
+    }, [showDetails, name]); // <--- Dipendenze: l'effetto si riesegue quando showDetails o name cambiano
+
+
+
+
 
     // COMPONENTE CARD
     return (
