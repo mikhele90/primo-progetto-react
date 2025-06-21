@@ -1,7 +1,7 @@
 /* src/App.css */
 /* Stili per il contenitore principale della navbar */
 .navbar {
-  background-color: #333; /* Sfondo scuro per contrasto */
+  background-color: #913333; /* Sfondo scuro per contrasto */
   padding: 1rem 0; /* Spaziatura interna verticale */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Leggera ombra per profondità */
 }
@@ -34,7 +34,7 @@
 
 /* Stili per i link quando ci si passa sopra con il mouse (hover) */
 .navbar a:hover {
-  background-color: #555; /* Cambia lo sfondo al passaggio del mouse */
+  background-color: #6b2525; /* Cambia lo sfondo al passaggio del mouse */
 }
 
 /* Stili per il link attivo (se React Router aggiunge una classe 'active' o simile) */
@@ -103,6 +103,7 @@
     transform: rotate(360deg);
   }
 }
+
 
 /* Stili per il componente RecipeCard */
 .recipe-card {

@@ -1,5 +1,6 @@
-import react from "react";
+import React, { useState } from "react";
 import Prodotto from "../components/Prodotto";
+import CardForm from "../components/CardForm";
 
 function handleClick(){
     alert('ciao coglione')
@@ -14,8 +15,11 @@ function handleSubmit(e){
     console.log(e.target.value);
 }
 
+
+
 function Prodotti(){
-    const products = [
+
+    const [products, setProducts] = useState([
         {
             id: 0,
             title: 'Patatine',
@@ -46,7 +50,12 @@ function Prodotti(){
             description: 'Da consumarsi previa cottura',
             isGood: false
         },
-    ];
+    ]);
+
+    const addProd = (product) => {
+        setProducts([...products, product])
+    };
+    
 
     return(
         <>
@@ -65,7 +74,11 @@ function Prodotti(){
             isGood={product.isGood}
             />
         ))}
+        
         </div>
+
+        <CardForm addProd={addProd} />
+
         <button 
         onClick={handleClick} 
         style={{
