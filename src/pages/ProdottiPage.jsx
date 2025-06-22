@@ -16,7 +16,6 @@ function handleSubmit(e){
 }
 
 
-
 function Prodotti(){
 
     const [products, setProducts] = useState([
@@ -52,8 +51,8 @@ function Prodotti(){
         },
     ]);
 
-    const addProd = (product) => {
-        setProducts([...products, product])
+    const addProd = (newProduct) => {
+        setProducts([...products, newProduct])
     };
     
 

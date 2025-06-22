@@ -7,7 +7,7 @@ function CardForm({ addProd }){
     const [formData, setFormData] = useState ({
         name: '',
         description: '',
-        isGood: false,
+        isGood: false
     })
 
 
@@ -22,13 +22,19 @@ function CardForm({ addProd }){
 
      const handleSubmit = (e) => {
         e.preventDefault();
-        const product = {
+        const newProduct = {
             id: Math.random(),
             title: formData.name,
             description: formData.description,
             isGood: formData.isGood
         }
-        addProd(product);
+        setFormData({
+            name: '',
+            description: '',
+            isGood: false
+        })
+
+        addProd(newProduct);
     }
 
     return (
@@ -56,7 +62,7 @@ function CardForm({ addProd }){
 
             <div>
                 <label>Descrizione: </label><br></br>
-                <textarea 
+                <textarea cols="30" rows="5"
                 name="description" 
                 value={formData.description} 
                 onChange={handleInputChange}></textarea>
