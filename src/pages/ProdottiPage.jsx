@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Prodotto from "../components/Prodotto";
 import CardForm from "../components/CardForm";
+import Example from "../components/Example";
 
 function handleClick(){
     alert('ciao coglione')
@@ -58,6 +59,7 @@ function Prodotti(){
 
     return(
         <>
+        <Example></Example>
         <h1>Prodotti</h1>
         <div style={{
             display: 'flex',
